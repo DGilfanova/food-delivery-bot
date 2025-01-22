@@ -12,7 +12,7 @@ TODO
 - инструкция (TODO)
 
 ### Документация
-- Таск-трекер: TODO
+- Таск-трекер: git@github.com:DGilfanova/food-delivery-bot.git
 - ТЗ: TODO
 
 ### Команда разработки
