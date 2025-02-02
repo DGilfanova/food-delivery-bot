@@ -1,0 +1,7 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/food-delivery-bot-db?prepareThreshold=0
+    username: postgres
+    password: password
+  liquibase:
+    enabled: true

@@ -1,0 +1,11 @@
+spring:
+  application:
+    name: DeliveryClub
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${PG_MASTER_HOST}:${PG_MASTER_PORT}/${PG_DB_NAME}
+    username: ${PG_USERNAME}
+    password: ${PG_PASSWORD}
+  liquibase:
+    changeLog: classpath:/db/changelog/changelog-master.yml
+    enabled: ${LIQUIBASE_ENABLED}
