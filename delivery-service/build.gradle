@@ -33,6 +33,7 @@ dependencies {
 	implementation 'org.liquibase:liquibase-core'
 	implementation 'org.postgresql:postgresql'
 	implementation 'org.jooq:jooq:3.17.5'
+	implementation 'org.telegram:telegrambots:6.5.0'
 
 	compileOnly 'org.projectlombok:lombok'
 
