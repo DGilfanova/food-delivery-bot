@@ -1,6 +1,6 @@
-package itis.kpfu.ru.deliveryclub.db.repository;
+package itis.kpfu.ru.deliveryservice.db.repository;
 
-import itis.kpfu.ru.deliveryclub.db.model.Dish;
+import itis.kpfu.ru.deliveryservice.db.model.Dish;
 
 import java.util.List;
 
