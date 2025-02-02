@@ -24,13 +24,18 @@ repositories {
 }
 
 dependencies {
+	implementation(enforcedPlatform('org.springframework.boot:spring-boot-dependencies:3.1.0')) {
+		exclude(group: "org.jooq", module: "jooq")
+	}
 	implementation 'org.springframework.boot:spring-boot-starter-batch'
-	implementation 'org.springframework.boot:spring-boot-starter-data-jdbc'
-	implementation 'org.springframework.boot:spring-boot-starter-security'
+	implementation 'org.springframework.boot:spring-boot-starter-web'
+	implementation 'org.springframework.boot:spring-boot-starter-jooq'
 	implementation 'org.liquibase:liquibase-core'
 	implementation 'org.postgresql:postgresql'
+	implementation 'org.jooq:jooq:3.17.5'
 
 	compileOnly 'org.projectlombok:lombok'
+
 	annotationProcessor 'org.projectlombok:lombok'
 
 	// Test
