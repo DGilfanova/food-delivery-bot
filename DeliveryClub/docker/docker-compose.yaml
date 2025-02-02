@@ -1,0 +1,18 @@
+version: '3.1'
+
+services:
+  postgres:
+    container_name: food-delivery-bot-db
+    image: postgres
+    restart: on-failure
+    environment:
+      POSTGRES_DB: food-delivery-bot-db
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: password
+    volumes:
+      - food-delivery-bot-db-data:/var/lib/postgresql/data
+    ports:
+      - "5432:5432"
+
+volumes:
+  food-delivery-bot-db-data:
