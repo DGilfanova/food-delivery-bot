@@ -1,7 +1,7 @@
-package itis.kpfu.ru.deliveryclub.db.repository.impl;
+package itis.kpfu.ru.deliveryservice.db.repository.impl;
 
-import itis.kpfu.ru.deliveryclub.db.model.Dish;
-import itis.kpfu.ru.deliveryclub.db.repository.DishRepository;
+import itis.kpfu.ru.deliveryservice.db.model.Dish;
+import itis.kpfu.ru.deliveryservice.db.repository.DishRepository;
 import org.springframework.jdbc.core.RowMapper;
 import org.springframework.jdbc.core.namedparam.MapSqlParameterSource;
 import org.springframework.jdbc.core.namedparam.NamedParameterJdbcOperations;

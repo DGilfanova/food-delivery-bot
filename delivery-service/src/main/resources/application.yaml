@@ -1,6 +1,6 @@
 spring:
   application:
-    name: DeliveryClub
+    name: delivery-service
   datasource:
     driver-class-name: org.postgresql.Driver
     url: jdbc:postgresql://${PG_MASTER_HOST}:${PG_MASTER_PORT}/${PG_DB_NAME}

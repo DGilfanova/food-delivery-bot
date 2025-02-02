@@ -1,4 +1,4 @@
-package itis.kpfu.ru.deliveryclub.db.model;
+package itis.kpfu.ru.deliveryservice.db.model;
 
 import lombok.Builder;
 

@@ -1,10 +1,10 @@
-package itis.kpfu.ru.deliveryclub;
+package itis.kpfu.ru.deliveryservice;
 
 import org.junit.jupiter.api.Test;
 import org.springframework.boot.test.context.SpringBootTest;
 
 @SpringBootTest
-class DeliveryClubApplicationTests {
+class DeliveryServiceApplicationTests {
 
 	@Test
 	void contextLoads() {
