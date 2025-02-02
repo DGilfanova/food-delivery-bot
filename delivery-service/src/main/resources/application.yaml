@@ -9,3 +9,6 @@ spring:
   liquibase:
     changeLog: classpath:/db/changelog/changelog-master.yml
     enabled: ${LIQUIBASE_ENABLED}
+
+telegram-bot:
+  token: ${TELEGRAM_BOT_TOKEN}
