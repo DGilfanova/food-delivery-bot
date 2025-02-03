@@ -47,7 +47,7 @@ Telegram bot is designed for food delivery from various cafes and restaurants. M
 |3.2||Possibility to confirm or cancel the order|
 |**4**|**:car:Delivery management**|**Indication of cooking time for each dish**|
 |4.1||Tracking delivery status (delivered to courier, in transit, delivered)|
-|**5**|**::moneybag:Pricing and discounts**|**Setting prices for dishes**|
+|**5**|**:moneybag:Pricing and discounts**|**Setting prices for dishes**|
 |5.1||Creation of promotions, discounts and promo codes|
 |5.2||Possibility to set a minimum order amount|
 |**6**|**:bar_chart:Analytics and reports**|**View statistics on orders (quantity, amount, popular dishes)**|
