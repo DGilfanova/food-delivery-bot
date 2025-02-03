@@ -9,7 +9,27 @@ spring:
   liquibase:
     changeLog: classpath:/db/changelog/changelog-master.yml
     enabled: ${LIQUIBASE_ENABLED}
-  profiles:
-    default: local
+  batch:
+    jdbc:
+      initialize-schema: always
+
+kafka:
+  get-courier-location:
+    servers: ${KAFKA_GET_COURIER_LOCATION_SERVERS}
+    login: ${KAFKA_GET_COURIER_LOCATION_LOGIN}
+    password: ${KAFKA_GET_COURIER_LOCATION_PASSWORD}
+    topic: ${KAFKA_GET_COURIER_LOCATION_TOPIC}
+    sasl-mechanism: PLAIN
+    security: org.apache.kafka.common.security.plain.PlainLoginModule
+    security-protocol: PLAINTEXT
+  send-courier-location:
+    servers: ${KAFKA_SEND_COURIER_LOCATION_SERVERS}
+    login: ${KAFKA_SEND_COURIER_LOCATION_LOGIN}
+    password: ${KAFKA_SEND_COURIER_LOCATION_PASSWORD}
+    topic: ${KAFKA_SEND_COURIER_LOCATION_TOPIC}
+    sasl-mechanism: PLAIN
+    security: org.apache.kafka.common.security.plain.PlainLoginModule
+    security-protocol: PLAINTEXT
+
 telegram-bot:
   token: ${TELEGRAM_BOT_TOKEN}
