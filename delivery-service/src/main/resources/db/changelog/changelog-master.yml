@@ -2,3 +2,9 @@ databaseChangeLog:
   - include:
       file: DDL/20250110-init-db.yml
       relativeToChangelogFile: true
+  - include:
+      file: DDL/20250203-add-courier.yml
+      relativeToChangelogFile: true
+  - include:
+      file: DDL/20250203-fix-orders-fc.yml
+      relativeToChangelogFile: true
