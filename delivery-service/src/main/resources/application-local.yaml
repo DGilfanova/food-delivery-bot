@@ -19,5 +19,5 @@ kafka:
     topic: "courier-location"
 
 telegram-bot:
-  token: 7913464085:AAFhcrs83c8EBJTAGr1-qElhr079v75K934
+  token: your-token
 
