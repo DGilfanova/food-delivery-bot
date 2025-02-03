@@ -39,7 +39,7 @@ public class FoodDeliveryBot extends TelegramLongPollingBot {
             cart.put(chatId, new ArrayList<>(tempCart.getOrDefault(chatId, new ArrayList<>())));
             tempCart.remove(chatId);
             sendMainMenu(chatId);
-        } else if (data.equals("🚫 Отменить")) {
+        } else if (data.equals("Отменить")) {
             tempCart.remove(chatId);
             sendMainMenu(chatId);
         } else if (menu.contains(data)) {
@@ -50,6 +50,10 @@ public class FoodDeliveryBot extends TelegramLongPollingBot {
                 tempCart.get(chatId).add(data);
             }
             updateMenuWithButtons(chatId, update.getCallbackQuery().getMessage().getMessageId().longValue());
+        } else if(data.equals("Заказ")){
+            sendOrder(chatId);
+        }else if(data.equals("Заказать")){
+            confirmOrder(chatId);
         }
     }
 
@@ -133,11 +137,39 @@ public class FoodDeliveryBot extends TelegramLongPollingBot {
 
     private void sendOrder(Long chatId) {
         List<String> order = cart.getOrDefault(chatId, new ArrayList<>());
-        String text = order.isEmpty() ? "Ваша корзина пуста." : "Ваш заказ: \n" + String.join("\n", order);
+        String text; //= order.isEmpty() ? "Ваша корзина пуста." : "Ваш заказ: \n" + String.join("\n", order);
 
+        if(order.isEmpty()){
+            text = "Ваша корзина пуста";
+        }else{
+            text = "Ваш текущий заказ: \n" + String.join("\n", order) + "\n\n Нажмите 'Подтвердить' в меню";
+        }
         SendMessage message = new SendMessage();
         message.setChatId(chatId.toString());
         message.setText(text);
+
+        //Кнопка заказать
+        if(!order.isEmpty()){
+            InlineKeyboardMarkup markup = new InlineKeyboardMarkup();
+            markup.setKeyboard(Collections.singletonList(Collections.singletonList(createButton("Заказать"))));
+            message.setReplyMarkup(markup);
+        }
+
+        try {
+            execute(message);
+        } catch (TelegramApiException e) {
+            e.printStackTrace();
+        }
+    }
+
+    //Метод для подтверждения заказа
+    private void confirmOrder(Long chatId){
+        tempCart.put(chatId, new ArrayList<>(cart.getOrDefault(chatId, Collections.emptyList())));
+        cart.remove(chatId);
+
+        SendMessage message = new SendMessage();
+        message.setChatId(chatId.toString());
+        message.setText("Заказ сформирован");
 
         try {
             execute(message);
