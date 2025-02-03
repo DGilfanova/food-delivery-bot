@@ -1,0 +1,23 @@
+spring:
+  datasource:
+    url: jdbc:postgresql://localhost:5432/food-delivery-bot-db?prepareThreshold=0
+    username: postgres
+    password: password
+  liquibase:
+    changeLog: classpath:/db/changelog/changelog-master.yml
+    enabled: true
+
+kafka:
+  get-courier-location:
+    servers: localhost:9092
+    login: kafka
+    password: password
+    topic: "courier-location"
+  send-courier-location:
+    servers: localhost:9092
+    login: kafka
+    password: password
+    topic: "courier-location"
+
+telegram-bot:
+  token: 7913464085:AAFhcrs83c8EBJTAGr1-qElhr079v75K934
