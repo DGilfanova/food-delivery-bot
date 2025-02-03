@@ -6,3 +6,18 @@ spring:
   liquibase:
     enabled: true
 
+kafka:
+  get-courier-location:
+    servers: localhost:9092
+    login: kafka
+    password: password
+    topic: "courier-location"
+  send-courier-location:
+    servers: localhost:9092
+    login: kafka
+    password: password
+    topic: "courier-location"
+
+telegram-bot:
+  token: 7913464085:AAFhcrs83c8EBJTAGr1-qElhr079v75K934
+
