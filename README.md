@@ -63,6 +63,25 @@ Telegram bot is designed for food delivery from various cafes and restaurants. M
 |**10**|**:mailbox_closed:Setting up the establishment's work**|**Possibility of temporary shutdown of order acceptance (for technical break)**|
 |**11**|**:speech_balloon:Technical support**|**Access to support chat for technical issues**|
 
+### Courier functionality
+|1|:memo:Registration and authorization|Possibility of registration via phone number|   
+|:-|:-|:-|
+|1.1||Account verification via moderation (data verification)|
+|**2**|**:rice_scene:Courier profile**|**Indication of the type of transport (pedestrian, bicycle, car, motorcycle)**|
+|2.1||Ability to upload a profile photo|
+|**3**|**:ledger:Sending order information**|**The bot sends the courier a notification about a new order with details (restaurant address, delivery address, list of dishes, special customer requests)**|
+|3.1||The courier can accept or refuse the order|
+|3.2||The rejected order will be offered to another courier|
+|**4**|**:arrow_up_small:Order status tracking**|**The bot sends notifications to the courier about the change in the order status (the order is ready for pickup, in progress)**|
+|4.1||The courier can mark the stages of order fulfillment (order in transit, order delivered)|
+|**5**|**:phone:Interaction with the client**|**БThe bot gives the courier the opportunity to contact the client via chat or call.**|
+|5.1||The bot sends notifications to the courier about problems with the order (the delivery address is incorrect)|
+|**6**|**:star:Rating and reviews**|**The bot sends notifications to the courier about new reviews and ratings.**|
+|**7**|**:clock10:Working hours**|**The bot sends notifications to the courier about the start and end of the working day**|
+|7.1||The courier can temporarily disable accepting orders via the bot|
+|**8**|**:speech_balloon:Technical support**|**The bot provides the courier with access to the support chat to resolve technical issues**|
+|8.1||The bot informs the courier about technical updates and innovations|
+
 ## :wrench:Build & Deploy
 #### Technical requirements for the system on which the project is launched:
 - Docker must be installed
@@ -81,8 +100,8 @@ Change params **USER** to the path of your project and **TELEGRAM_BOT_TOKEN** to
 
 ## :busts_in_silhouette:Development Team
 - Ibragimov Timur, developer-team lead
-- Satkanov Altnbek, systems analyst, developer
-- Suleymanov Ilnur, developer
+- Satkanov Altnbek, developer
+- Suleymanov Ilnur, systems analyst
 - Gilfanova Diana, developer
 
 ## :eyes:Sponsors
