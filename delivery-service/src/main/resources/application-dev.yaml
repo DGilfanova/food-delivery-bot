@@ -18,5 +18,3 @@ kafka:
     password: password
     topic: "courier-location"
 
-telegram-bot:
-  token: your-token

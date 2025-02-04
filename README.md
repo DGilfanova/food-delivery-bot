@@ -63,9 +63,17 @@ Telegram bot is designed for food delivery from various cafes and restaurants. M
 |**10**|**:mailbox_closed:Setting up the establishment's work**|**Possibility of temporary shutdown of order acceptance (for technical break)**|
 |**11**|**:speech_balloon:Technical support**|**Access to support chat for technical issues**|
 
-## Build & Deploy
-- требования к системе (TODO)
-- инструкция (TODO)
+## :wrench:Build & Deploy
+#### Technical requirements for the system on which the project is launched:
+- Docker must be installed
+
+#### Start project locally
+You need to run command below in your terminal:
+```
+docker compose -f USER/delivery-service/docker/docker-compose.yaml -p food-delivery-bot up -d
+```
+Change params **USER** to the path of your project and **TELEGRAM_BOT_TOKEN** to token of your bot.
+
 
 ## :books:Documentation
 - [Task tracker](https://tracker.yandex.ru/DELIVERYCLUB)
@@ -78,4 +86,4 @@ Telegram bot is designed for food delivery from various cafes and restaurants. M
 - Gilfanova Diana, developer
 
 ## :eyes:Sponsors
-[ITIS KFU](https://kpfu.ru/itis)
+[IITIS KFU](https://kpfu.ru/itis)
